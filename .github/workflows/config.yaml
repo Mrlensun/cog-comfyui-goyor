@@ -32,6 +32,9 @@ jobs:
           with:
             token: ${{ secrets.REPLICATE_API_TOKEN }}
 
+        - name: Git Clone ComfUI
+          run: git clone https://github.com/comfyanonymous/ComfyUI.git ComfyUI
+
         - name: Push to Replicate
           run: |
             cog push r8.im/mrlensun/any-comfyui-workflow
