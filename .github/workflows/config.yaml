@@ -35,6 +35,9 @@ jobs:
         - name: Git Clone ComfUI
           run: git clone https://github.com/comfyanonymous/ComfyUI.git ComfyUI
 
+        - name: Install Custom Nodes
+          run: python scripts/install_custom_nodes.py
+
         - name: Push to Replicate
           run: |
             cog push r8.im/mrlensun/any-comfyui-workflow
